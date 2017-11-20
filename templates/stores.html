@@ -1,0 +1,56 @@
+{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stores</title>
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+
+  <body>
+      <div class="container">
+        <ol class="breadcrumb my-4">
+          <li class="breadcrumb-item active">Stores</li>
+        </ol>
+        <table class="table">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Category</th>
+              <th>Name of store</th>
+              <th>Link</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Last update</th>
+              <th>Updated by</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for store in stores %}
+              <tr>
+                <td class="align-middle">
+                  {{ store.category }}
+                </td>
+                <td class="align-middle">
+                  {{ store.storename}}
+                </td>
+                <td class="align-middle">
+                  {{ store.store_link}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_username}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_pw}}
+                </td>
+                <td class="align-middle">
+                {{ store.last_updated}}
+                </td>
+                <td class="align-middle">
+                {{ store.updated_by}}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </body>
+  </html>

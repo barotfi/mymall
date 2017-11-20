@@ -1,0 +1,131 @@
+{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Storesbycategory</title>
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+
+  <body>
+      <div class="container">
+        <ol class="breadcrumb my-4">
+          <li class="breadcrumb-item active">Stores by category</li>
+        </ol>
+<br><br>
+<h3>FOOD</h3>
+        <table class="table">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Name of store</th>
+              <th>Link</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Last update</th>
+              <th>Updated by</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for store in stores_food %}
+              <tr>
+                </td>
+                <td class="align-middle">
+                {{ store.storename}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_link}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_username}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_pw}}
+                </td>
+                <td class="align-middle">
+                {{ store.last_updated}}
+                </td>
+                <td class="align-middle">
+                {{ store.updated_by}}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+<br><br>
+<h3>TRAVEL</h3>
+        <table class="table">
+          <thead class="thead-inverse">
+            <tr>
+              <th>Name of store</th>
+              <th>Link</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Last update</th>
+              <th>Updated by</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for store in stores_travel %}
+              <tr>
+                <td class="align-middle">
+                {{ store.storename}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_link}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_username}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_pw}}
+                </td>
+                <td class="align-middle">
+                {{ store.last_updated}}
+                </td>
+                <td class="align-middle">
+                {{ store.updated_by}}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+<br><br>
+<h3>ELECTRONIC</h3>
+                <table class="table">
+                  <thead class="thead-inverse">
+                    <tr>
+                      <th>Name of store</th>
+                      <th>Link</th>
+                      <th>Username</th>
+                      <th>Password</th>
+                      <th>Last update</th>
+                      <th>Updated by</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for store in stores_electronic %}
+                      <tr>
+                        <td class="align-middle">
+                        {{ store.storename}}
+                        </td>
+                        <td class="align-middle">
+                        {{ store.store_link}}
+                        </td>
+                        <td class="align-middle">
+                        {{ store.store_username}}
+                        </td>
+                        <td class="align-middle">
+                        {{ store.store_pw}}
+                        </td>
+                        <td class="align-middle">
+                        {{ store.last_updated}}
+                        </td>
+                        <td class="align-middle">
+                        {{ store.updated_by}}
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+      </div>
+    </body>
+  </html>
