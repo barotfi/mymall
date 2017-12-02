@@ -1,19 +1,18 @@
-{% load static %}<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Storesbycategory</title>
-     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-  </head>
+{% extends 'base.html' %}
 
-  <body>
-      <div class="container">
-        <ol class="breadcrumb my-4">
-          <li class="breadcrumb-item active">Stores by category</li>
-        </ol>
-<br><br>
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+  <li class="breadcrumb-item active"><a href="{% url 'storesbycategory' %}">Stores by category</a></li>
+{% endblock %}
+
+{% block content %}
+<br><br><br><br>
+
+<div class="container" style="background-color: #EFF8FB;">
+
 <h3>FOOD</h3>
-        <table class="table">
+        <table class="table table-bordered">
           <thead class="thead-inverse">
             <tr>
               <th>Name of store</th>
@@ -50,9 +49,11 @@
             {% endfor %}
           </tbody>
         </table>
+</div>
 <br><br>
+<div class="container" style="background-color: #EFF8FB;">
 <h3>TRAVEL</h3>
-        <table class="table">
+        <table class="table table-bordered">
           <thead class="thead-inverse">
             <tr>
               <th>Name of store</th>
@@ -88,9 +89,11 @@
             {% endfor %}
           </tbody>
         </table>
+</div>
 <br><br>
+<div class="container" style="background-color: #EFF8FB;">
 <h3>ELECTRONIC</h3>
-                <table class="table">
+                <table class="table table-bordered">
                   <thead class="thead-inverse">
                     <tr>
                       <th>Name of store</th>
@@ -127,5 +130,6 @@
                   </tbody>
                 </table>
       </div>
+</div>
     </body>
-  </html>
+  {% endblock %}

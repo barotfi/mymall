@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Home</li>
+{% endblock %}
+{% block content %}
+  <body>
+
+    <div class="container">
+        <ol class="breadcrumb my-4">
+          <li class="breadcrumb-item active">Stores ordered alphabetically</li>
+        </ol>
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Name of store</th>
+              <th>Category</th>
+              <th>Link</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Last update</th>
+              <th>Updated by</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for store in storeABClist %}
+              <tr>
+                <td class="align-middle">
+                  {{ store.storename}}
+                </td>
+                <td class="align-middle">
+                  {{ store.category }}
+                </td>
+                <td class="align-middle">
+                  {{ store.store_link}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_username}}
+                </td>
+                <td class="align-middle">
+                {{ store.store_pw}}
+                </td>
+                <td class="align-middle">
+                {{ store.last_updated}}
+                </td>
+                <td class="align-middle">
+                {{ store.updated_by}}
+                </td>
+              </tr>
+            {% endfor %}
+
+          </tbody>
+        </table>
+        <a class="btn btn-primary" href="/new" role="button">Add new store</a>
+      </div>
+    </body>
+  {% endblock %}
