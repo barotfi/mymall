@@ -25,7 +25,7 @@ SECRET_KEY = '&e@1tuh%*qy$k!3_=t)rlblpb1i3^2g0=!gb=pzr_*wq65+9q+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['barotfi.pythonanywhere.com']
 
 # Application definition
 
